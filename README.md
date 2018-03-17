@@ -2,9 +2,11 @@ Python project to do the following:
 
 * [x] Loop over DT photo gallery stories (web.gal-) and grab metadata (including SSP id)
 * [x] Go grab metadata from SSP API
-* [ ] Figure out date folder structure
-* [ ] Go grab images from SSP
-* [ ] Package each story up into folder with XML and images for NCS importing
+* [x] Figure out date folder structure
+* [x] Go grab images from SSP
+* [x] Package each story up into folder with XML and images for NCS importing
+* [ ] Smart dates (timezone)
+  * See: https://bitbucket.org/registerguard/turin/src/ebf92578ab06b9219ac1555cfa286bbd8cc7292e/scripts/export_saxotech.py?at=xml_export&fileviewer=file-view-default#export_saxotech.py-60
 
 ## Preliminary research
 
@@ -72,3 +74,15 @@ Data coming out of [SSP API](http://slideshow.registerguard.com/slideshowpro/api
 * id (unique ssp id)
 * filename (original filename)
 * original (original image file)
+
+
+This worked to download image:
+
+```python
+r = requests.get(url, stream=True, verify=False)
+path = '/Users/rdenton/Desktop/test.jpg'
+if r.status_code = 200:
+	with open(path, 'wb') as f:
+	    r.raw.decode_content = True
+	    shutil.copyfileobj(r.raw,f)
+```

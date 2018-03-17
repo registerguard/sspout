@@ -1,7 +1,9 @@
-import requests, json, csv
+import requests, json, csv, os, shutil
 from lxml import etree
 from bs4 import BeautifulSoup
 from datetime import datetime
+
+cwd = os.getcwd()
 
 def getStories(subcats,items=10):
     # raw_input for items ???
@@ -33,6 +35,19 @@ def storyCSV(stories,csvname='stories.csv'):
             #print(story['headline'])
     print("{0} has been written.".format(csvname))
 
+def createFolders(dateDIR):
+    if (os.path.isdir('{0}/{1}'.format(cwd, dateDIR)) == False):
+        os.makedirs('{0}/{1}'.format(cwd, dateDIR))
+
+def getImage(url,dateDIR):
+    filename = url.split('/')[-1]
+    path = '{0}/{1}/{2}'.format(cwd, dateDIR, filename)
+    rimg = requests.get(url, stream=True, verify=False)
+    if (rimg.status_code == 200):
+        with open(path, 'wb') as f:
+            rimg.raw.decode_content = True
+            shutil.copyfileobj(rimg.raw, f)
+
 def writeXML(stories,xmlname='out.xml'):
     ### Write XML
     for story in stories:
@@ -47,6 +62,10 @@ def writeXML(stories,xmlname='out.xml'):
         dateTEMP = story['published']
         dateTEMP = datetime.strptime(dateTEMP, '%Y-%m-%d %H:%M:%S')
         date.text = dateTEMP.strftime('%Y-%m-%dT%H:%M:%S')
+        # Create folder structure
+        dateDIR = dateTEMP.strftime('%Y/%m/%d')
+        createFolders(dateDIR)
+        # Come back to XML
         category = etree.SubElement(gallery,'category')
         category.text = story['section']
         taxonomy = etree.SubElement(gallery,'taxonomy')
@@ -73,11 +92,13 @@ def writeXML(stories,xmlname='out.xml'):
             credit.text = etree.CDATA(pic['byline'])
             filename = etree.SubElement(image,'filename')
             filename.text = etree.CDATA(pic['filename'])
+            getImage(pic['original'], dateDIR)
             # print(etree.tostring(images, pretty_print=True))
         # Move into exporting to file
         # print(etree.tostring(gallery, pretty_print=True))
         out = etree.ElementTree(gallery)
-        out.write(xmlname, pretty_print=True, xml_declaration=True, encoding='utf-8')
+        outFILE = '{0}/{1}/{2}'.format(cwd,dateDIR, xmlname)
+        out.write(outFILE, pretty_print=True, xml_declaration=True, encoding='utf-8')
 
 # DT API variables
 photoSubcats = "32058824,32067956,32058769,32058823,32058773,32058730,32058735,32058827,32058745,31994432,32058749,32058736,32058195,32058817,32068003,32058784,32058756"
