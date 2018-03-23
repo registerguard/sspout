@@ -1,10 +1,10 @@
-import json, csv, requests, os, shutil
+import json, csv, requests, os, shutil, re
 from datetime import datetime
 from pytz import timezone
 
 def getStories(subcats,items=10):
     # raw_input for items ???
-    payload = {'subcats': subcats, 'items': items}
+    payload = {'items': items, 'subcats': subcats}
     url = 'http://registerguard.com/csp/cms/sites/rg/feeds/json.csp'
     try:
         r = requests.get(url, params=payload)
@@ -29,7 +29,19 @@ def storyCSV(stories,csvname='stories.csv'):
         writer.writeheader()
         for story in stories:
             writer.writerow({'headline': story['headline'], 'url': story['path'], 'author': story['byline'], 'pubdate': story['published']})
-            #print(story['headline'])
+            # print(story['headline'])
+        """
+        fieldnames = ['headline','url','author','pubdate','video']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for story in stories:
+            vid = story['video']
+            vidRegex = r"youtube\.com|youtu\.be"
+            vidTest = re.search(vidRegex,vid)
+            if (vidTest):
+                writer.writerow({'headline': story['headline'], 'url': story['path'], 'author': story['byline'], 'pubdate': story['published'], 'video': story['video']})
+                # print(story['headline'])
+        """
     print("{0} has been written.".format(csvname))
 
 def createFolders(filePath):

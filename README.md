@@ -7,7 +7,8 @@ Python project to do the following:
 * [x] Package each story up into folder with XML and images for NCS importing
 * [x] Smart dates (timezone)
   * See: https://bitbucket.org/registerguard/turin/src/ebf92578ab06b9219ac1555cfa286bbd8cc7292e/scripts/export_saxotech.py?at=xml_export&fileviewer=file-view-default#export_saxotech.py-60
-* [ ] Do the same for videopip 
+* [x] Do the same for video
+* [ ] Get image for video files
 
 ## Preliminary research
 
