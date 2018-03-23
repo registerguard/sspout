@@ -3,24 +3,16 @@ from lxml import etree
 from bs4 import BeautifulSoup
 from datetime import datetime
 from pytz import timezone
+from scripts import *
 
+# Global vars
 cwd = os.getcwd()
-
-def getStories(subcats,items=10):
-    # raw_input for items ???
-    payload = {'subcats': subcats, 'items': items}
-    url = 'http://registerguard.com/csp/cms/sites/rg/feeds/json.csp'
-    try:
-        r = requests.get(url, params=payload)
-    except:
-        print('bad request: {0}?items={1}&subcats={2}'.format(url, items, subcats))
-    try:
-        json = r.json()
-    except:
-        print('bad json: {0}?items={1}&subcats={2}'.format(url, items, subcats))
-    #hits = json['hits']
-    stories = json['stories']
-    return stories
+photoSubcats = "32058824,32067956,32058769,32058823,32058773,32058730,32058735,32058827,32058745,31994432,32058749,32058736,32058195,32058817,32068003,32058784,32058756"
+#videoSubcats = "31994433,32058759,32058196,32003307,32058816,32042463,32042459,32058748,31994425,32058825,32042583,32042464,32058820,32058774,32042460,32003311,32058826,32058162"
+items = 999
+pacific = timezone('America/Los_Angeles')
+startDate = pacific.localize(datetime(2018,1,1,0,0,1))
+endDate = pacific.localize(datetime(2018,2,28,11,59,59))
 
 def getAlbum(sspalbum):
     # raw_input for items ???
@@ -35,23 +27,6 @@ def getAlbum(sspalbum):
         return album
     except:
         print('bad json: {0}?id={1}'.format(url, sspalbum))
-    
-
-def storyCSV(stories,csvname='stories.csv'):
-    # Error checking for csv extension???
-    print("Writing {0}...".format(csvname))
-    with open(csvname,'w',newline='') as csvfile:
-        fieldnames = ['headline','url','author','pubdate']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for story in stories:
-            writer.writerow({'headline': story['headline'], 'url': story['path'], 'author': story['byline'], 'pubdate': story['published']})
-            #print(story['headline'])
-    print("{0} has been written.".format(csvname))
-
-def createFolders(filePath):
-    if (os.path.isdir('{0}'.format(filePath)) == False):
-        os.makedirs('{0}'.format(filePath))
 
 def getImage(url,imgPath):
     filename = url.split('/')[-1]
@@ -61,12 +36,6 @@ def getImage(url,imgPath):
         with open(path, 'wb') as f:
             rimg.raw.decode_content = True
             shutil.copyfileobj(rimg.raw, f)
-
-def getDatetime(dateString):
-    # Return datetime object
-    dateTEMP = datetime.strptime(dateString, '%Y-%m-%d %H:%M:%S')
-    dateTEMP = pacific.localize(dateTEMP)
-    return dateTEMP
 
 def writeGalleryXML(stories):
     for story in stories:
@@ -145,14 +114,6 @@ def main(subcats, items):
     ### Write XML
     writeGalleryXML(stories)
     #writeVideoXML(stories)
-
-# DT API variables
-photoSubcats = "32058824,32067956,32058769,32058823,32058773,32058730,32058735,32058827,32058745,31994432,32058749,32058736,32058195,32058817,32068003,32058784,32058756"
-videoSubcats = "31994433,32058759,32058196,32003307,32058816,32042463,32042459,32058748,31994425,32058825,32042583,32042464,32058820,32058774,32042460,32003311,32058826,32058162"
-items = 350
-pacific = timezone('America/Los_Angeles')
-startDate = pacific.localize(datetime(2018,1,1,0,0,1))
-endDate = pacific.localize(datetime(2018,2,28,11,59,59))
 
 # Write out to XML
 main(photoSubcats, items)
