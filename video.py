@@ -34,7 +34,7 @@ def writeVideoXML(stories):
                 uniqueid.text = story['id']
                 title = etree.SubElement(article,'title')
                 title.text = etree.CDATA(story['headline'])
-                date = etree.SubElement(article,'date')
+                date = etree.SubElement(article,'pubdate')
                 date.text = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
                 # Create folder structure
                 dtDIR = dt.strftime('%Y/%m/%d')
@@ -42,16 +42,29 @@ def writeVideoXML(stories):
                 createFolders(filePath)
                 # Come back to XML
                 category = etree.SubElement(article,'category')
-                category.text = story['section']
+                category.text = etree.CDATA(story['section'])
                 byline = etree.SubElement(article, 'byline')
-                byline.text = story['byline']
-                taxonomy = etree.SubElement(article,'taxonomy')
+                byline.text = etree.CDATA(story['byline'])
+                taxonomies = etree.SubElement(article,'taxonomies')
+                taxonomy = etree.SubElement(taxonomies,'taxonomy')
                 taxonomy.text = story['catid']
-                video = etree.SubElement(article,'videoID')
-                video.text = vid
+                images = etree.SubElement(article, 'images')
+                image = etree.SubElement(images, 'image')
+                title = etree.SubElement(image,'title')
+                title.text = ""
+                caption = etree.SubElement(image,'caption')
+                caption.text = ""
+                credit = etree.SubElement(image,'credit')
+                credit.text = ""
+                filename = etree.SubElement(image,'filename')
+                filename.text = "{0}.jpg".format(vid)
+                vidPic = "https://img.youtube.com/vi/{0}/maxresdefault.jpg".format(vid)
+                getImage(vidPic, filePath,vid)
                 seo = etree.SubElement(article,'seo-label')
                 seoRegex = r'http://registerguard.com(\/.*\.html.csp)'
                 seo.text = re.search(seoRegex,story['path'])[1]
+                video = etree.SubElement(article,'video-id')
+                video.text = vid
                 # Move into exporting to file
                 # print(etree.tostring(article, pretty_print=True))
                 out = etree.ElementTree(article)

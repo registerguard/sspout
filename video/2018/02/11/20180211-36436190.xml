@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36436190</uniqueid>
   <title><![CDATA[Rock Slide Closes Aufderheide Drive]]></title>
-  <date>2018-02-11T12:13:01-0800</date>
-  <category>video</category>
-  <byline>Rob Romig</byline>
-  <taxonomy>32042463</taxonomy>
-  <videoID>A51XvwYmzjM</videoID>
+  <pubdate>2018-02-11T12:13:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Rob Romig]]></byline>
+  <taxonomies>
+    <taxonomy>32042463</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>A51XvwYmzjM.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36436190-319/rock-slide-closes-aufderheide-drive.html.csp</seo-label>
+  <video-id>A51XvwYmzjM</video-id>
 </article>

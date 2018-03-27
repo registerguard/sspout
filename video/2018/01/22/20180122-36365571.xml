@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36365571</uniqueid>
   <title><![CDATA[Culture carvings]]></title>
-  <date>2018-01-22T08:56:02-0800</date>
-  <category>video</category>
-  <byline>Kelly Lyon</byline>
-  <taxonomy>32058825</taxonomy>
-  <videoID>iVycI2AJrtM</videoID>
+  <pubdate>2018-01-22T08:56:02-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kelly Lyon]]></byline>
+  <taxonomies>
+    <taxonomy>32058825</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>iVycI2AJrtM.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36365571-319/culture-carvings.html.csp</seo-label>
+  <video-id>iVycI2AJrtM</video-id>
 </article>

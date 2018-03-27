@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36398130</uniqueid>
   <title><![CDATA[Gearing up]]></title>
-  <date>2018-01-31T15:18:02-0800</date>
-  <category>video</category>
-  <byline>Kelly Lyon</byline>
-  <taxonomy>32042459</taxonomy>
-  <videoID>-5fF7n1cDn8</videoID>
+  <pubdate>2018-01-31T15:18:02-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kelly Lyon]]></byline>
+  <taxonomies>
+    <taxonomy>32042459</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>-5fF7n1cDn8.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36398130-319/gearing-up.html.csp</seo-label>
+  <video-id>-5fF7n1cDn8</video-id>
 </article>

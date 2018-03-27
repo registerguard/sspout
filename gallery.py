@@ -28,15 +28,6 @@ def getAlbum(sspalbum):
     except:
         print('bad json: {0}?id={1}'.format(url, sspalbum))
 
-def getImage(url,imgPath):
-    filename = url.split('/')[-1]
-    path = '{0}/{1}'.format(imgPath,filename)
-    rimg = requests.get(url, stream=True, verify=False)
-    if (rimg.status_code == 200):
-        with open(path, 'wb') as f:
-            rimg.raw.decode_content = True
-            shutil.copyfileobj(rimg.raw, f)
-
 def writeGalleryXML(stories):
     for story in stories:
         if (story['sspid'] != 'NULL'):

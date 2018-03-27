@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36472247</uniqueid>
   <title><![CDATA[Aging Entertainers]]></title>
-  <date>2018-02-20T20:31:02-0800</date>
-  <category>video</category>
-  <byline>Kelly Lyon</byline>
-  <taxonomy>32058825</taxonomy>
-  <videoID>LHN9tXzZR7U</videoID>
+  <pubdate>2018-02-20T20:31:02-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kelly Lyon]]></byline>
+  <taxonomies>
+    <taxonomy>32058825</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>LHN9tXzZR7U.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36472247-319/aging-entertainers.html.csp</seo-label>
+  <video-id>LHN9tXzZR7U</video-id>
 </article>

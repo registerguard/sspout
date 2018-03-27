@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36381286</uniqueid>
   <title><![CDATA[Good Walks: Go behind the scenes at Shellburg Falls]]></title>
-  <date>2018-01-26T11:26:25-0800</date>
-  <category>video</category>
-  <byline>Kim Gilbert</byline>
-  <taxonomy>32042459</taxonomy>
-  <videoID>gfQcFDysXK4</videoID>
+  <pubdate>2018-01-26T11:26:25-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kim Gilbert]]></byline>
+  <taxonomies>
+    <taxonomy>32042459</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>gfQcFDysXK4.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36381286-319/good-walks-go-behind-the-scenes-at-shellburg-falls.html.csp</seo-label>
+  <video-id>gfQcFDysXK4</video-id>
 </article>

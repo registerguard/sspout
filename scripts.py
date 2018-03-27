@@ -54,3 +54,15 @@ def getDatetime(dateString):
     pacific = timezone('America/Los_Angeles')
     dateTEMP = pacific.localize(dateTEMP)
     return dateTEMP
+
+def getImage(url,imgPath,overname=""):
+    filename = url.split('/')[-1]
+    if overname:
+        path = '{0}/{1}.jpg'.format(imgPath,overname)
+    else:
+        path = '{0}/{1}'.format(imgPath,filename)
+    rimg = requests.get(url, stream=True, verify=False)
+    if (rimg.status_code == 200):
+        with open(path, 'wb') as f:
+            rimg.raw.decode_content = True
+            shutil.copyfileobj(rimg.raw, f)

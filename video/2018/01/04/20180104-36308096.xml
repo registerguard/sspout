@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36308096</uniqueid>
   <title><![CDATA[Oregon Horse Rescue]]></title>
-  <date>2018-01-04T11:07:01-0800</date>
-  <category>video</category>
-  <byline>Dylan Darling</byline>
-  <taxonomy>32042463</taxonomy>
-  <videoID>Zt5GzwcVRCw</videoID>
+  <pubdate>2018-01-04T11:07:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Dylan Darling]]></byline>
+  <taxonomies>
+    <taxonomy>32042463</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>Zt5GzwcVRCw.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36308096-319/oregon-horse-rescue.html.csp</seo-label>
+  <video-id>Zt5GzwcVRCw</video-id>
 </article>

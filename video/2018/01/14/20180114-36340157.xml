@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36340157</uniqueid>
   <title><![CDATA[Three shot in Springfield]]></title>
-  <date>2018-01-14T14:33:01-0800</date>
-  <category>video</category>
-  <byline>Chris Pietsch</byline>
-  <taxonomy>32042463</taxonomy>
-  <videoID>DSX4J_6KEXo</videoID>
+  <pubdate>2018-01-14T14:33:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Chris Pietsch]]></byline>
+  <taxonomies>
+    <taxonomy>32042463</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>DSX4J_6KEXo.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36340157-319/three-shot-in-springfield.html.csp</seo-label>
+  <video-id>DSX4J_6KEXo</video-id>
 </article>

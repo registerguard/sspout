@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36343273</uniqueid>
   <title><![CDATA[A poem to Eugene on MLK Day]]></title>
-  <date>2018-01-15T16:38:02-0800</date>
-  <category>video</category>
-  <byline>Chris Pietsch</byline>
-  <taxonomy>32042463</taxonomy>
-  <videoID>_cFl4zztexQ</videoID>
+  <pubdate>2018-01-15T16:38:02-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Chris Pietsch]]></byline>
+  <taxonomies>
+    <taxonomy>32042463</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>_cFl4zztexQ.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36343273-319/a-poem-to-eugene-on-mlk-day.html.csp</seo-label>
+  <video-id>_cFl4zztexQ</video-id>
 </article>

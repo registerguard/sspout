@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36497417</uniqueid>
   <title><![CDATA[Eight seconds on a load of TNT]]></title>
-  <date>2018-02-27T13:47:01-0800</date>
-  <category>video</category>
-  <byline>Chris Pietsch</byline>
-  <taxonomy>32058196</taxonomy>
-  <videoID>Jya-jYQvC74</videoID>
+  <pubdate>2018-02-27T13:47:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Chris Pietsch]]></byline>
+  <taxonomies>
+    <taxonomy>32058196</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>Jya-jYQvC74.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36497417-319/eight-seconds-on-a-load-of-tnt.html.csp</seo-label>
+  <video-id>Jya-jYQvC74</video-id>
 </article>

@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36358150</uniqueid>
   <title><![CDATA[Storm on the Oregon coast]]></title>
-  <date>2018-01-19T20:25:01-0800</date>
-  <category>video</category>
-  <byline>Chris Pietsch</byline>
-  <taxonomy>32042463</taxonomy>
-  <videoID>VbvTRcrnQ8Q</videoID>
+  <pubdate>2018-01-19T20:25:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Chris Pietsch]]></byline>
+  <taxonomies>
+    <taxonomy>32042463</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>VbvTRcrnQ8Q.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36358150-319/storm-on-the-oregon-coast.html.csp</seo-label>
+  <video-id>VbvTRcrnQ8Q</video-id>
 </article>

@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36351189</uniqueid>
   <title><![CDATA[Community conversation]]></title>
-  <date>2018-01-17T22:40:01-0800</date>
-  <category>video</category>
-  <byline>Kelly Lyon</byline>
-  <taxonomy>31994433</taxonomy>
-  <videoID>-KExjb_cojA</videoID>
+  <pubdate>2018-01-17T22:40:01-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kelly Lyon]]></byline>
+  <taxonomies>
+    <taxonomy>31994433</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>-KExjb_cojA.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36351189-319/community-conversation.html.csp</seo-label>
+  <video-id>-KExjb_cojA</video-id>
 </article>

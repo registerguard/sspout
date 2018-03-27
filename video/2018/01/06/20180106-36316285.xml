@@ -2,10 +2,20 @@
 <article>
   <uniqueid>36316285</uniqueid>
   <title><![CDATA[Printing with passion]]></title>
-  <date>2018-01-06T20:49:15-0800</date>
-  <category>video</category>
-  <byline>Kelly Lyon</byline>
-  <taxonomy>32058825</taxonomy>
-  <videoID>yJUJDbfgCkQ</videoID>
+  <pubdate>2018-01-06T20:49:15-0800</pubdate>
+  <category><![CDATA[video]]></category>
+  <byline><![CDATA[Kelly Lyon]]></byline>
+  <taxonomies>
+    <taxonomy>32058825</taxonomy>
+  </taxonomies>
+  <images>
+    <image>
+      <title></title>
+      <caption></caption>
+      <credit></credit>
+      <filename>yJUJDbfgCkQ.jpg</filename>
+    </image>
+  </images>
   <seo-label>/rg/video/36316285-319/printing-with-passion.html.csp</seo-label>
+  <video-id>yJUJDbfgCkQ</video-id>
 </article>
