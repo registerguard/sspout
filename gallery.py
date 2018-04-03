@@ -81,7 +81,13 @@ def writeGalleryXML(stories):
                     # Remove .jpg for getImage override
                     imgName = '.'.join(pic['filename'].split('.')[:-1])
                     getImage(pic['image'], filePath, imgName)
-                    # print(etree.tostring(images, pretty_print=True))
+                    #print(etree.tostring(images, pretty_print=True))
+                seo = etree.SubElement(gallery,'seo-label')
+                seoRegex = r'http\:\/\/registerguard\.com(\/.*\.csp)'
+                try:
+                    seo.text = re.search(seoRegex,story['path'])[1]
+                except:
+                    print("--- ERROR ERROR --- {0}".format(story['path']))
                 # Move into exporting to file
                 # print(etree.tostring(gallery, pretty_print=True))
                 out = etree.ElementTree(gallery)
