@@ -12,7 +12,7 @@ photoSubcats = "32058824,32067956,32058769,32058823,32058773,32058730,32058735,3
 items = 999
 pacific = timezone('America/Los_Angeles')
 startDate = pacific.localize(datetime(2018,1,1,0,0,1))
-endDate = pacific.localize(datetime(2018,2,28,11,59,59))
+endDate = pacific.localize(datetime(2018,3,31,11,59,59))
 
 def getAlbum(sspalbum):
     # raw_input for items ???
@@ -78,7 +78,9 @@ def writeGalleryXML(stories):
                     credit.text = etree.CDATA(pic['byline'])
                     filename = etree.SubElement(image,'filename')
                     filename.text = etree.CDATA(pic['filename'])
-                    getImage(pic['original'], filePath)
+                    # Remove .jpg for getImage override
+                    imgName = '.'.join(pic['filename'].split('.')[:-1])
+                    getImage(pic['image'], filePath, imgName)
                     # print(etree.tostring(images, pretty_print=True))
                 # Move into exporting to file
                 # print(etree.tostring(gallery, pretty_print=True))
