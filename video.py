@@ -42,12 +42,12 @@ def writeVideoXML(stories):
                 createFolders(filePath)
                 # Come back to XML
                 category = etree.SubElement(article,'category')
-                category.text = etree.CDATA(story['section'])
+                category.text = "VIDEO"
                 byline = etree.SubElement(article, 'byline')
                 byline.text = etree.CDATA(story['byline'])
                 taxonomies = etree.SubElement(article,'taxonomies')
                 taxonomy = etree.SubElement(taxonomies,'taxonomy')
-                taxonomy.text = story['catid']
+                taxonomy.text = "630"
                 images = etree.SubElement(article, 'images')
                 image = etree.SubElement(images, 'image')
                 title = etree.SubElement(image,'title')

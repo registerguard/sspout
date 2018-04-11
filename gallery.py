@@ -49,9 +49,10 @@ def writeGalleryXML(stories):
                 createFolders(filePath)
                 # Come back to XML
                 category = etree.SubElement(gallery,'category')
-                category.text = story['section']
-                taxonomy = etree.SubElement(gallery,'taxonomy')
-                taxonomy.text = story['catid']
+                category.text = "PHOTOGALLERY"
+                taxonomies = etree.SubElement(gallery,'taxonomies')
+                taxonomy = etree.SubElement(taxonomies,'taxonomy')
+                taxonomy.text = "629"
                 description = etree.SubElement(gallery,'description')
                 description.text = etree.CDATA(story['excerpt'])
                 # Move into images
