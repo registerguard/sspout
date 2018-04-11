@@ -34,6 +34,8 @@ def writeVideoXML(stories):
                 uniqueid.text = story['id']
                 title = etree.SubElement(article,'title')
                 title.text = etree.CDATA(story['headline'])
+                byline = etree.SubElement(article, 'byline')
+                byline.text = etree.CDATA(story['byline'])
                 date = etree.SubElement(article,'pubdate')
                 date.text = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
                 # Create folder structure
@@ -43,8 +45,6 @@ def writeVideoXML(stories):
                 # Come back to XML
                 category = etree.SubElement(article,'category')
                 category.text = "VIDEO"
-                byline = etree.SubElement(article, 'byline')
-                byline.text = etree.CDATA(story['byline'])
                 taxonomies = etree.SubElement(article,'taxonomies')
                 taxonomy = etree.SubElement(taxonomies,'taxonomy')
                 taxonomy.text = "630"

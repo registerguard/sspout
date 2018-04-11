@@ -41,6 +41,8 @@ def writeGalleryXML(stories):
                 uniqueid.text = story['id']
                 title = etree.SubElement(gallery,'title')
                 title.text = etree.CDATA(story['headline'])
+                byline = etree.SubElement(gallery, 'byline')
+                byline.text = etree.CDATA(story['byline'])
                 date = etree.SubElement(gallery,'date')
                 date.text = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
                 # Create folder structure
@@ -53,8 +55,6 @@ def writeGalleryXML(stories):
                 taxonomies = etree.SubElement(gallery,'taxonomies')
                 taxonomy = etree.SubElement(taxonomies,'taxonomy')
                 taxonomy.text = "629"
-                description = etree.SubElement(gallery,'description')
-                description.text = etree.CDATA(story['excerpt'])
                 # Move into images
                 try:
                     album = getAlbum(story['sspid'])
