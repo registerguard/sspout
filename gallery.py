@@ -11,9 +11,10 @@ photoSubcats = "32058824,32067956,32058769,32058823,32058773,32058730,32058735,3
 #videoSubcats = "31994433,32058759,32058196,32003307,32058816,32042463,32042459,32058748,31994425,32058825,32042583,32042464,32058820,32058774,32042460,32003311,32058826,32058162"
 items = 9999
 pacific = timezone('America/Los_Angeles')
-startDate = pacific.localize(datetime(2016,1,1,0,0,1))
+startDate = pacific.localize(datetime(2016,1,28,0,0,1))
+# startDate = pacific.localize(datetime(2016,1,1,0,0,1))
 # endDate = pacific.localize(datetime(2018,3,31,11,59,59))
-endDate = pacific.localize(datetime(2017,1,4,11,59,59))
+endDate = pacific.localize(datetime(2016,1,28,11,59,59))
 
 def getAlbum(sspalbum):
     # raw_input for items ???
@@ -71,7 +72,7 @@ def writeGalleryXML(stories):
                     # Make sure caption is clean
                     caption = etree.SubElement(image,'caption')
                     captionTEMP = pic['description']
-                    captionTEMP = captionTEMP.replace('\n','').replace('\r','').replace('\t','')
+                    captionTEMP = captionTEMP.replace('\n','').replace('\r','').replace('\t','').replace('\x03','')
                     caption.text = etree.CDATA(captionTEMP)
                     # Make sure credit is clean
                     credit = etree.SubElement(image,'credit')
